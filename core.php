@@ -7,6 +7,11 @@ Version: 1.0.0
 License: GPLv2 or later
 Author URI: http://siteyar.net/sadeq-yaqobi/ */
 
+// if the session hasn't started yet, start it
+/*if (!session_id()) {
+    session_start();
+}*/
+
 #for security
 defined('ABSPATH') || exit();
 
@@ -55,19 +60,23 @@ function sp_register_assets_admin() {
 add_action('wp_enqueue_scripts', 'sp_register_assets_front');
 add_action('admin_enqueue_scripts', 'sp_register_assets_admin');
 //activation and deactivation plugin hooks
-function func1()
+function sp_activation_functions()
 {
 //    any work that needs to do when the plugin is activated like creating tables on database
 }
 
-function func2()
+function sp_deactivation_functions()
 {
     //
 }
-register_activation_hook(__FILE__,func1());
-register_deactivation_hook(__FILE__,func2());
+register_activation_hook(__FILE__,'sp_activation_functions');
+register_deactivation_hook(__FILE__,'sp_deactivation_functions');
 
 //including
+
+// it's necessary to include pluggable.php file if you want to use something like wp_mail() function in plugins because this function will include just when all plugins were included
+//include_once (ABSPATH.'wp-includes/pluggable.php');
+
 if (is_admin()) {
     include SP_PLUGIN_INC . 'admin/menus.php';
 } else {

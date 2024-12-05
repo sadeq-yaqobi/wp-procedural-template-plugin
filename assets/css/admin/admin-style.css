@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Vazirmatn:wght@100..900&display=swap');
+@import url('../../fonts/IRANSansWeb.ttf');
+
+.sp-wrap {
+    font-family: "IRANSansWeb", "Vazirmatn", Tahoma, Arial, sans-serif !important;
+    max-width: 100%;
+    margin: 25px 5px 25px 25px;
+    padding: 25px;
+    /*background-color: #fff;*/
+    /*background-image: linear-gradient(0deg, #fff 0%, #ECE9E6 100%);*/
+    border-radius: 18px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+.sp-wrap .form-table th[scope=row] {
+    display: none;
+}
+
+.sp-wrap h1, .sp-wrap h2, .sp-wrap h3, .sp-wrap h4, .sp-wrap h5, .sp-wrap h6 {
+    font-family: "IRANSansWeb", "Vazirmatn", Tahoma, Arial, sans-serif !important;
+}
+.sp-element-wrapper, .sp-number-item-slider-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+.sp-number-slider-container{
+    display: none;
+}
+.sp-element-wrapper input, .sp-element-wrapper select {
+    border:1px solid #EFEFEF;
+    font-size: 15px;
+    padding-right: 15px;
+    border-radius: 5px;
+    height: 46px;
+    width: 400px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.sp-element-wrapper input:focus, .sp-element-wrapper select:focus {
+    border-color: #0093E9 !important;
+    box-shadow: 0 0 0 1px #0093E9 !important;
+    outline: 2px solid transparent!important;
+}
+.sp-element-wrapper label {
+    margin: 25px 0 10px 0;
+    font-weight: bold;
+}
+.sp-display-type label {
+    margin-left: 20px;
+}
+.sp-display-type input {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.sp-display-type input + img {
+    cursor: pointer;
+    padding: 5px;
+}
+.sp-display-type input:checked + img {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 2px solid #0093E9;
+    border-radius: 5px;
+}
+
+
+.sp-submit-wrapper {
+    margin-top: 30px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.sp-submit-wrapper input {
+    min-height: 42px !important;
+    line-height: 2.307692 !important;
+    padding: 0px 40px !important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+    font-size: 16px !important;
+
+    background-color: #0093E9 !important;
+    background-image: linear-gradient(160deg, #0093E9 0%, #0093E9 100%) !important;
+
+    border: none !important;
+    color: #fff !important;
+    border-radius: 5px !important;
+    transition: all ease-in-out 0.2s;
+
+    outline: none!important;
+}
+.sp-submit-wrapper input:hover {
+    transform: translateY(-2%);
+    border: none!important;
+    outline: none!important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset;
+
+}
+.sp-submit-wrapper input:focus {
+    border: none!important;
+    outline: none!important;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset!important;
+
+}
+
+
+
