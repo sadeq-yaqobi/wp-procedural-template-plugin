@@ -1,7 +1,7 @@
 <?php
 function sp_initialize_options_setting()
 {
-    $options = [
+    $sp_options = [
         '_sp_title' => 'مطالب مرتبط',
         '_sp_number' => '4',
         '_sp_term' => 'category',
@@ -10,12 +10,10 @@ function sp_initialize_options_setting()
         '_sp_number_item_slider'=>'3'
     ];
 
-//    foreach ($options as $option => $default_value) update_option($option, $default_value);
+add_option('_sp_option_name',$sp_options);
 }
 
 function sp_delete_options_setting()
 {
-    $options = ['_sp_title', '_sp_number', '_sp_term', '_sp_order_by', '_sp_display_type','_sp_number_item_slider'];
-
-//    foreach ($options as $option) delete_option($option);
+    delete_option('_sp_option_name');
 }

@@ -1,7 +1,7 @@
 <?php
-/*Plugin Name: sample plugin
+/*Plugin Name: sample procedural plugin
 Plugin URI: http://siteyar.net/plugins/
-Description: پلاگین نمونه
+Description:  پلاگین نمونه رویه‌ای
 Author: sadeq yaqobi
 Version: 1.0.0
 License: GPLv2 or later
@@ -28,21 +28,21 @@ const SP_PLUGIN_ASSETS_URL = SP_PLUGIN_URL . 'assets/';
  */
 function sp_register_assets_front() {
     // Register and enqueue CSS
-    wp_register_style('sp-style',SP_PLUGIN_ASSETS_URL . 'css/front/style.css',[],'1.0.0');
+    wp_register_style('sp-style',SP_PLUGIN_ASSETS_URL . 'css/front/front-style.css',[],'1.0.0');
     wp_enqueue_style('sp-style');
 
     // Register and enqueue JavaScript
     wp_register_script('jquery-toast', SP_PLUGIN_ASSETS_URL . 'js/jquery.toast.min.js', ['jquery'], '1.0.0', ['strategy' => 'async', 'in_footer' => true]);
     wp_enqueue_script('jquery-toast');
-    wp_register_script('sp-main-js',SP_PLUGIN_ASSETS_URL . 'js/front/main.js', ['jquery'], '1.0.0', ['strategy' => 'async', 'in_footer' => true]);
+    wp_register_script('sp-main-js',SP_PLUGIN_ASSETS_URL . 'js/front/front-js.js', ['jquery'], '1.0.0', ['strategy' => 'async', 'in_footer' => true]);
     wp_enqueue_script('sp-main-js');
     wp_register_script('sp-front-ajax',SP_PLUGIN_ASSETS_URL . 'js/front/front-ajax.js', ['jquery'], '1.0.0', ['strategy' => 'async', 'in_footer' => true]);
     wp_enqueue_script('sp-front-ajax');
 
     // localize script
     wp_localize_script('sp-front-ajax', 'sp-ajax', [
-        'ajaxurl' => admin_url('admin-ajax.php'),
-        '_nonce' => wp_create_nonce()
+        'sp_ajaxurl' => admin_url('admin-ajax.php'),
+        '_sp_nonce' => wp_create_nonce()
     ]);
 }
 
