@@ -40,7 +40,7 @@ function sp_register_assets_front() {
     wp_enqueue_script('sp-front-ajax');
 
     // localize script
-    wp_localize_script('sp-front-ajax', 'sp-ajax', [
+    wp_localize_script('sp-front-ajax', 'sp_ajax', [
         'sp_ajaxurl' => admin_url('admin-ajax.php'),
         '_sp_nonce' => wp_create_nonce()
     ]);

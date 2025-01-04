@@ -32,7 +32,7 @@ function sp_sample_plugin_admin_layout()
 function sp_setting_init()
 {
 
- register_setting('sample-plugin', '', 'sp_form_sanitize_input');
+ register_setting('sample-plugin', '_sp_option_name', 'sp_form_sanitize_input');
 
     // Add settings section
     add_settings_section('sp_settings_section', '', '', 'sample-plugin-html');

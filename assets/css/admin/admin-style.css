@@ -103,5 +103,27 @@
 
 }
 
+@media (max-width: 1129px) {
+    .sp-fixed-position-wrapper {
+        flex-direction: column !important;
+        align-items: flex-start!important;
+    }
+    .sp-unit-type,.sp-offset-range {
+        margin-right: 0;
+    }
+}
+@media (max-width: 782px) {
+    .sp-fixed-position-wrapper div {
+        width: 100%!important;
+    }
+    .fixed-position-option {
+        width: 100%!important;
+
+    }
+    .sp-element-wrapper input:not(input[type=radio]), .sp-element-wrapper select {
+        width: 100%;
+    }
+}
+
 
 
